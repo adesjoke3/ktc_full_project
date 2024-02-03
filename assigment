@@ -1,0 +1,28 @@
+my_list = [ "E","A","D","G","B","E"]
+# print("E")
+# print("A")
+# print("D")
+# print("G")
+# print("B")
+# print("E")
+for i in my_list :
+     print(i)
+
+# for item in my_list :
+#     print(item)
+
+names = ["kelly","michelle","beyonce"]
+for n in names:
+    print(n + ",can you handle this?")
+print("i dont think they can handle this")
+
+range(10)
+[0,1,2,3,4,5,6,7,8,9]
+
+range(3)
+[0,1,2]
+
+for i in range(3):
+    print("Hello","hello","hello","how low")
+
+print("Hello","hello","hello")

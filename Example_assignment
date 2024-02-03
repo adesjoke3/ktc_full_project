@@ -1,0 +1,22 @@
+steps = -3
+if abs(steps) > 0:
+        print('Character is moving')
+
+steps = -3
+if steps < 0 or steps > 0:
+        print('Character is moving')
+
+        print(bool(0))
+        False
+        print(bool(1))
+        True
+        print(bool(1123.23))
+        True
+        print(bool(-500))
+
+        print(bool(1))
+        False
+        print(bool('a'))
+        True
+
+    
