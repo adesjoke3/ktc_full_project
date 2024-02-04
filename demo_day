@@ -1,0 +1,104 @@
+# import dependencies A dependency is libary or module that our code needs to funtion.
+
+import time # to make code interactive
+from colorama import Fore, Style, init
+
+# launch colorama
+init(autoreset = True)
+
+player_score = 0
+
+def introduction():
+    #Welcome the Player
+    print(Fore.LIGHTMAGENTA_EX + "Welcome to the adejoke game adventure")
+    time.sleep(1)
+    player_name = input(Fore.LIGHTCYAN_EX + "What's your name? ")
+    time.sleep(1)
+    print(f"Hello{player_name} You wake up on valentine's day and you remember that the valentine party starts in 5 hours")
+    time.sleep(1)
+    def breakfast_time():
+        print("You get out your bed and go downstairs to quickly eat breakfast")
+
+def make_choices(question, options, score_change):
+     print(Fore.GREEN + Style.BRIGHT + question)
+     for i, option in enumerate(options, 1):
+          print(f"{i}. {option}")
+          while True:
+               try:
+                    choice = int(input(Fore.LIGHTBLUE_EX + "Enter the number of your choice: "))
+               if 1 <= choice <= len(options):
+               # Update global score variable
+                    global player_score
+               player_score   += score_change[choice - 1]
+               return choice
+               else:
+                    choice = make_choices("What breakfast do you make?",["Oatmeal", "Bread and egg with tea"],[1, -1])
+if choice == 1:
+     print(Fore.GREEN + Style.BRIGHT + "Oatmeal is a fast and easy breakfast that means you didnt waste alot of time")
+else:
+     print(Fore.RED + Style.DIM + "Wrong choice the bread and egg toke alot of time,you just watsed 30  minutes")
+time.sleep(1)
+print("After you finish your breakfast,you go upstairs to take a pick a outfit to go shopping" )
+time.sleep(1)
+        def shopping_outfit():
+            print("But first you have to pick an outfit")
+            choice = make_choices("What do you pick as your outfit to go to a store,["Crop top and tight jeans with heels","Long shirt with baggy jeans and a jacket"],[1, -1]")
+            if choice == 1:
+                 print("Bad idea.You got it was cold because it was moring and you didnt bring a jacket and the jeans and heels were so uncomfortable")
+            else:
+                 print("Good job it was a little cold but lucky you brought a jacket you were very comfy.")
+                 time.sleep(1)
+                 def what_to_buy_first():
+                    print("You get inside the store and dont know what to buy first")
+    
+        choice = make_choices("What do you buy first,["stuff for yourself","food to bring"],[1, -1]")
+        if choice == 1:
+             print("You forgot to get the gifts and food but suddenlly remembered at the last minute")
+        else:
+             ("Getting stuff for the party helped you remember to get the gifts")
+             time.sleep(1)
+        def gifts_for_people():
+             print("You get back from the store and go upstairs to dress up ,you have 2 more hours so hurry!")
+             choice = make_choices("how do you dress to the party,["red heart dress  red jacket and puma shoes","red sliky heart jumpsuit with heels and red jacket"],[1,-1]")
+             if choice == 1:
+                  print("It was very comfortable and look a little cute")
+             else:
+                  print("It isnt that comfy but its okay and VERY CUTE ")
+          time.sleep(1)
+        print("You get in the car and finally arive at the party")
+        time.sleep(1)
+        print("You knock on the door and walk in with your wrapped gift andd 3 plates of food")
+        time.sleep(1)
+        print("You set your food on the counter and placed your gift on the table beheid to the couch")
+        time.sleep(1)
+        print("You go to the center of the room and start dancing.A little while later it was time to open gifts ")
+        time.sleep(1)
+        print("firstly your parents opened your gift")
+        choice = make_choices("Whitch present do your parents open?["present1","present2"]")
+        if choice == 1:
+             print("Present one had candy whitch your parents cant eat they got a little mad but didnt say anything")
+        else:
+             print("There was matching pjs and your parents tought it was so cute")
+
+             print("Now your bestfriend is gonna open your gift")
+             time.sleep(1)
+        print("firstly your bestfriend opened your gift")
+        choice = make_choices("Whitch present do your bestfriend open?["present1","present2"]")
+        if choice == 1:
+             print("Present one had clock whitch your bsetfriend didnt like it but acted greatfull")
+        else:
+             print("There was a valentine fit with a crop hoodie under top and matching pants and your bestfriend loved it")
+
+print("Now your valentine is gonna open your gift")
+time.sleep(1)
+print("firstly your valentine opened your gift")
+choice = make_choices("Whitch present do your valentine open?["present1","present2"][1,-1]")
+if choice == 1:
+             print("there was a cringy note and he got bad vibes from you")
+else:
+             print("There was a box of chocalate and and cute teddy bear and he found that really cute")
+
+             print("The party finally ended and you go home" )
+print("TY for playing my game hope u had fun bye")
+exit
+
